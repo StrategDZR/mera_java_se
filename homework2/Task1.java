@@ -1,7 +1,7 @@
 import java.util.Random;
 import static java.lang.Integer.MAX_VALUE;
 
-/**
+/*
  * Задание 1. Случайности складываются
  * - Создать массив на 10 чисел типа int
  * - Заполнить массив случайными числами, используя класс Random и функцию nextInt()
