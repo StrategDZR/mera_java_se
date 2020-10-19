@@ -24,14 +24,10 @@ public class Task3 {
         while (!(negativeArr.size() >= ARR_SIZE && positiveArr.size() >= ARR_SIZE)) {
             int value = random.nextInt();
 
-            if (value > 0) {
-                if (positiveArr.size() <= ARR_SIZE) {
-                    positiveArr.add(value);
-                }
-            } else {
-                if (negativeArr.size() <= ARR_SIZE) {
-                    negativeArr.add(value);
-                }
+            if (value > 0 && positiveArr.size() <= ARR_SIZE) {
+                positiveArr.add(value);
+            } else if (value < 0 && negativeArr.size() <= ARR_SIZE) {
+                negativeArr.add(value);
             }
         }
 
