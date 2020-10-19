@@ -13,20 +13,21 @@ class Homework1 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
+        Integer num1 = sc.nextInt();
+        Integer num2 = sc.nextInt();
         sc.close();
 
-        if (num1 > num2) {
-            output(num1, num2);
-        } else {
-            output(num2, num1);
-        }
+        compareAndFindSum(num1, num2);
     }
 
-    private static void output(int a, int b) {
+    private static void compareAndFindSum(Integer a, Integer b) {
+        if (a > b) {
+            System.out.printf("Число %d больше %d", a, b);
+        } else if (a < b) {
+            System.out.printf("Число %d меньше %d", a, b);
+        }
+
         int sum = a + b;
-        System.out.printf("Число %d больше %d", a, b);
         System.out.println("\nСумма: " + sum);
     }
 }
