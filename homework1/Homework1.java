@@ -25,8 +25,6 @@ class Homework1 {
             System.out.printf("Число %d больше %d", a, b);
         } else if (a < b) {
             System.out.printf("Число %d меньше %d", a, b);
-        } else {
-            System.out.print("");
         }
 
         int sum = a + b;
