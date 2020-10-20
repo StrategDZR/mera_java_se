@@ -38,7 +38,7 @@ public class Person {
 
     private static String getRandomValueFromArray(String[] arr) {
         Random rnd = new Random();
-        int rndIndex = rnd.nextInt(arr.length - 1);
+        int rndIndex = rnd.nextInt(arr.length);
         return arr[rndIndex];
     }
 
