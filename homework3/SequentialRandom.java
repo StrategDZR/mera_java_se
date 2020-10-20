@@ -38,6 +38,10 @@ public class SequentialRandom {
     }
 
     public static void resetRandom() {
-        value = new Random().nextInt();
+        int rnd = new Random().nextInt();
+        if (rnd == 0){
+            resetRandom();
+        }
+        value = rnd;
     }
 }
