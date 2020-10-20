@@ -22,12 +22,12 @@ import java.util.Random;
 
 public class SequentialRandom {
     private static int value = 0;
-    private static int prevValue = 0;
+    private static boolean isValueReset = false;
 
     public SequentialRandom() {
-        if (prevValue == 0) {
+        if (!isValueReset) {
             resetRandom();
-            prevValue = getValue();
+            isValueReset = true;
         } else {
             value++;
         }
@@ -38,10 +38,6 @@ public class SequentialRandom {
     }
 
     public static void resetRandom() {
-        int rnd = new Random().nextInt();
-        if (rnd == 0){
-            resetRandom();
-        }
-        value = rnd;
+        value = new Random().nextInt();
     }
 }
