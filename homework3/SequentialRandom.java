@@ -21,7 +21,7 @@ new SequentialRandom() // содержит 43) (на 1  больше)
 import java.util.Random;
 
 public class SequentialRandom {
-    private static int value = 0;
+    private static int value;
     private static boolean isValueReset = false;
 
     public SequentialRandom() {
