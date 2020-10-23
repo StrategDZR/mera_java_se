@@ -21,12 +21,16 @@ public class Main {
     public static void main(String[] args) {
         AbstractFabric[] arrayOfFabricsWithRandomType = new AbstractFabric[10];
         Arrays.fill(arrayOfFabricsWithRandomType, getRandomFabric()); //возможно, я неправильно понял задание
+        System.out.println(Arrays.toString(arrayOfFabricsWithRandomType));
 
         Fruit[] arrayOfFruitsFromAllFabrics = new Fruit[20];
         for (int i = 0; i < arrayOfFruitsFromAllFabrics.length; i += 2) {
             AbstractFabric rndFabric = getRandomFabric();
             arrayOfFruitsFromAllFabrics[i] = rndFabric.makeFruit();
             arrayOfFruitsFromAllFabrics[i + 1] = rndFabric.makeFruit();
+        }
+        for (Fruit f : arrayOfFruitsFromAllFabrics) {
+            System.out.println(f.toString());
         }
     }
 
