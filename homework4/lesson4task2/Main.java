@@ -1,7 +1,9 @@
 package lesson4task2;
 
 import lesson4task1.Fruit;
+
 import java.util.Arrays;
+
 import static lesson4task2.AbstractFabric.getRandomFabric;
 
 /*
@@ -20,7 +22,9 @@ LongPineapplesFactory - которая создает только ананас�
 public class Main {
     public static void main(String[] args) {
         AbstractFabric[] arrayOfFabricsWithRandomType = new AbstractFabric[10];
-        Arrays.fill(arrayOfFabricsWithRandomType, getRandomFabric());
+        for (int i = 0; i < arrayOfFabricsWithRandomType.length; i++) {
+            arrayOfFabricsWithRandomType[i] = getRandomFabric();
+        }
         System.out.println(Arrays.toString(arrayOfFabricsWithRandomType));
 
         Fruit[] arrayOfFruitsFromAllFabrics = new Fruit[20];
