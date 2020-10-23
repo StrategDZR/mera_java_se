@@ -22,6 +22,6 @@ public class Pineapple extends Fruit {
     @Override
     public String toString() {
         return "Type of fruit: " + getClass().getName().replace("lesson4task1.", "")
-                + "; Height of tail: " + getHeightOfTail() + "; Weight:" + super.getWeight();
+                + "; Height of tail: " + getHeightOfTail() + "; Weight: " + super.getWeight();
     }
 }
