@@ -1,8 +1,8 @@
 package lesson4task2;
 
 import lesson4task1.Fruit;
-
 import java.util.Arrays;
+import static lesson4task2.AbstractFabric.getRandomFabric;
 
 /*
 2. Фруктовая абстрактность
@@ -20,7 +20,7 @@ LongPineapplesFactory - которая создает только ананас�
 public class Main {
     public static void main(String[] args) {
         AbstractFabric[] arrayOfFabricsWithRandomType = new AbstractFabric[10];
-        Arrays.fill(arrayOfFabricsWithRandomType, getRandomFabric()); //возможно, я неправильно понял задание
+        Arrays.fill(arrayOfFabricsWithRandomType, getRandomFabric());
         System.out.println(Arrays.toString(arrayOfFabricsWithRandomType));
 
         Fruit[] arrayOfFruitsFromAllFabrics = new Fruit[20];
@@ -32,28 +32,5 @@ public class Main {
         for (Fruit f : arrayOfFruitsFromAllFabrics) {
             System.out.println(f.toString());
         }
-    }
-
-    public static AbstractFabric getRandomFabric() {
-        int rndIndex = (int) Math.floor(1 + (5 - 1) * Math.random());
-        AbstractFabric rndFabric;
-
-        switch (rndIndex) {
-            case 1:
-                rndFabric = new ThinOrangeFactory();
-                break;
-            case 2:
-                rndFabric = new RedApplesFactory();
-                break;
-            case 3:
-                rndFabric = new GreenApplesFactory();
-                break;
-            case 4:
-                rndFabric = new LongPineapplesFactory();
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + rndIndex);
-        }
-        return rndFabric;
     }
 }
