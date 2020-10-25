@@ -29,6 +29,28 @@ public enum Season {
         }
         return s;
     }
+
+    static String getGameForASeason(Season s) {
+        String game;
+        switch (s) {
+            case WINTER:
+                game = "снежки";
+                break;
+            case SPRING:
+                game = "запуск корабликов по ручьям";
+                break;
+            case SUMMER:
+                game = "собирание и поедание ягод";
+                break;
+            case AUTUMN:
+                game = "измерение глубины луж методом \"сапога\"";
+                break;
+            default:
+                game = "No game";
+                System.out.println("There is no such game");
+        }
+        return game;
+    }
 }
 
 
