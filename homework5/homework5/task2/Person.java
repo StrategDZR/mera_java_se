@@ -1,7 +1,6 @@
 package homework5.task2;
 
 import java.util.Random;
-import static homework5.task2.Season.getGameForASeason;
 
 public class Person {
     private String name;
@@ -29,6 +28,6 @@ public class Person {
     @Override
     public String toString() {
         return "У персоны с именем " + getName()
-                + " любимая игра - " + getGameForASeason(getFavouriteSeason()) + ".";
+                + " любимая игра - " + getFavouriteSeason().getGame() + ".";
     }
 }

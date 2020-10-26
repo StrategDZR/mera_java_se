@@ -3,10 +3,20 @@ package homework5.task2;
 import java.util.Random;
 
 public enum Season {
-    WINTER,
-    SPRING,
-    SUMMER,
-    AUTUMN;
+    WINTER("снежки"),
+    SPRING("запуск корабликов по ручьям"),
+    SUMMER("собирание и поедание ягод"),
+    AUTUMN("измерение глубины луж методом \"сапога\"");
+
+    private final String game;
+
+    Season(String game) {
+        this.game = game;
+    }
+
+    public String getGame() {
+        return game;
+    }
 
     static Season getRandomSeason() {
         Season s = null;
@@ -28,28 +38,6 @@ public enum Season {
                 System.out.println("There is no such season");
         }
         return s;
-    }
-
-    static String getGameForASeason(Season s) {
-        String game;
-        switch (s) {
-            case WINTER:
-                game = "снежки";
-                break;
-            case SPRING:
-                game = "запуск корабликов по ручьям";
-                break;
-            case SUMMER:
-                game = "собирание и поедание ягод";
-                break;
-            case AUTUMN:
-                game = "измерение глубины луж методом \"сапога\"";
-                break;
-            default:
-                game = "No game";
-                System.out.println("There is no such game");
-        }
-        return game;
     }
 }
 
