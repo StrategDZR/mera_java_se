@@ -7,7 +7,7 @@ public class MyArrayList<T> {
     private Object[] storage;
 
     public MyArrayList() {
-        this.storage = new Object[MAX_COUNT];
+        storage = (T[]) new Object[MAX_COUNT];
     }
 
     public Object[] getStorage() {
