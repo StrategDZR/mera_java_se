@@ -38,8 +38,8 @@ public class MyArrayList<T> {
         return storage.length;
     }
 
-    //T[] toArray(){return getStorage();} нельзя скастовать Object в T
+    T[] toArray(){return (T[]) storage;}
 
-    //T get(int i){return (T) storage[i];} нельзя скастовать Object в T
+    T get(int i){return (T) storage[i];}
 
 }
