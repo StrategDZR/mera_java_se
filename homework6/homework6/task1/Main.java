@@ -33,10 +33,9 @@ public class Main {
 
     public static void main(String[] args) {
         MyArrayList<String> mal = new MyArrayList<>();
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             mal.add(String.valueOf(i));
         }
-
-        System.out.println(mal);
+        System.out.println(mal.toString());
     }
 }
