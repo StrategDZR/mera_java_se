@@ -2,21 +2,13 @@ package homework5.task2;
 
 import java.util.Random;
 
+import static homework5.task2.Games.*;
+
 public enum Season {
-    WINTER("снежки"),
-    SPRING("запуск корабликов по ручьям"),
-    SUMMER("собирание и поедание ягод"),
-    AUTUMN("измерение глубины луж методом \"сапога\"");
-
-    private final String game;
-
-    Season(String game) {
-        this.game = game;
-    }
-
-    public String getGame() {
-        return game;
-    }
+    WINTER,
+    SPRING,
+    SUMMER,
+    AUTUMN;
 
     static Season getRandomSeason() {
         Season s = null;
@@ -38,6 +30,27 @@ public enum Season {
                 System.out.println("There is no such season");
         }
         return s;
+    }
+
+    static Games getGameForASeason(Season s) {
+        Games game = null;
+        switch (s) {
+            case WINTER:
+                game = SNOWBALLS_THROWING;
+                break;
+            case SPRING:
+                game = BOATS_ON_THE_STREAMS;
+                break;
+            case SUMMER:
+                game = FIND_AND_EAT_BERRIES;
+                break;
+            case AUTUMN:
+                game = MEASURING_PUDDLES_BY_BOOTS;
+                break;
+            default:
+                System.out.println("There is no such game");
+        }
+        return game;
     }
 }
 

@@ -5,18 +5,20 @@ import java.util.Random;
 public class Person {
     private String name;
     private Season favouriteSeason;
+    private Games gameForFavouriteSeason;
 
     public Person() {
         this.name = getRandomName();
         this.favouriteSeason = Season.getRandomSeason();
+        this.gameForFavouriteSeason = Season.getGameForASeason(this.favouriteSeason);
     }
 
     public String getName() {
         return name;
     }
 
-    public Season getFavouriteSeason() {
-        return favouriteSeason;
+    public Games getGameForFavouriteSeason() {
+        return gameForFavouriteSeason;
     }
 
     private String getRandomName() {
@@ -28,6 +30,6 @@ public class Person {
     @Override
     public String toString() {
         return "У персоны с именем " + getName()
-                + " любимая игра - " + getFavouriteSeason().getGame() + ".";
+                + " любимая игра - " + getGameForFavouriteSeason().getGameName() + ".";
     }
 }
