@@ -13,25 +13,23 @@ public class MyArrayList<T> {
         count = 0;
     }
 
-    void add(T t) {
+    void add(T item) {
         if (count >= MAX_COUNT) {
             throw new MyArrayStoreException("Max count exceeded");
         } else {
-            storage[count] = t;
+            storage[count] = item;
             count++;
         }
     }
 
-    boolean remove(T t) {
-        boolean flag = false;
+    boolean remove(T item) {
         for (int i = 0; i < count; ++i) {
-            if (storage[i].equals(t)) {
+            if (storage[i].equals(item)) {
                 removeItem(i);
-                flag = true;
-                break;
+                return true;
             }
         }
-        return flag;
+        return false;
     }
 
     private void removeItem(int index) {
