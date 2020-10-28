@@ -1,4 +1,7 @@
 package homework6.task1;
 
-public class MyArrayStoreException extends ArrayStoreException{
+class MyArrayStoreException extends ArrayStoreException {
+    public MyArrayStoreException(String message){
+        super(message);
+    }
 }
