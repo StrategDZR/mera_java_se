@@ -45,7 +45,7 @@ public class MyArrayList<T> {
         return (T[]) Arrays.copyOf(storage, count);
     }
 
-    T get(int i) {
-        return (T) storage[i];
+    T get(int index) {
+        return (T) storage[index];
     }
 }
